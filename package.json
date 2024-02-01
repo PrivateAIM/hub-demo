@@ -1,0 +1,30 @@
+{
+    "name": "demo",
+    "private": true,
+    "author": {
+        "name": "Peter Placzek",
+        "email": "tadashi@animesu.net",
+        "url": "https://tada5hi.net"
+    },
+    "license": "MIT",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "lint": "eslint --ext .ts src/",
+        "lint:fix": "npm run lint -- --fix",
+        "start": "node dist/index.js",
+        "dev": "ts-node src/index.ts",
+        "build": "rimraf ./dist && tsc -p tsconfig.build.json"
+    },
+    "dependencies": {
+        "@authup/core": "^0.45.7",
+        "@authup/server-adapter": "^0.45.7",
+        "@personalhealthtrain/core": "2.4.9"
+    },
+    "devDependencies": {
+        "@tada5hi/tsconfig": "^0.5.0",
+        "rimraf": "^5.0.5",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.3.2"
+    }
+}
